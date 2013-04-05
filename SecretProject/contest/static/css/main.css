@@ -1,0 +1,153 @@
+body {
+	background-color: #A1C4B5;
+    margin:0px;
+    font-family:'Helvetica', Arial, sans-serif;
+      font-weight:100;
+}
+
+/* home page */
+.mainlogo {
+	margin-top: 100px;
+	margin-left: 200px;
+	height: 200px;
+}
+
+.main_text {
+	display:inline-block;
+	font-size: 60px;
+	letter-spacing: -3px;
+}
+
+.preface {
+	margin-left: 45px;
+}
+
+.first {
+	color: #006EB8;
+}
+
+.second {
+	color: #FFFFFF;
+}
+
+.maintag {
+	margin-left: 170px;
+	margin-top: 5px;
+}
+
+.leftbar {
+	margin-left: 300px;
+	display: inline-block;
+}
+
+.rightbar {
+	margin-left: 200px;
+	display: inline-block;
+}
+
+.entrylink {
+	font-size: 30px;
+	color: black;
+}
+
+/* business.html */
+
+.distribution_container {
+	display: inline-block;
+}
+
+.header {
+	font-size: 40px;
+	line-height: 40px;
+	margin-bottom: 30px;
+}
+
+.midsection {
+	font-size: 25px;
+	line-height: 25px;
+}
+
+.infobox {
+	margin-bottom: 30px;
+}
+
+.reminder {
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	border: solid 2px;
+	position: relative;
+	top: -5px;
+}
+
+.distribution_container {
+	margin-left: 100px;
+}
+
+.distribution_graphic{
+	border: solid 2px;
+	width: 200px;
+	display: inline-block;
+	height: 124px;
+	position: relative;
+}
+
+.left_partition {
+	display: inline-block;
+	margin-left: 9px;
+	position: relative;
+	top: 20px;
+}
+
+.mid_partition {
+	display: inline-block;
+	position: relative;
+	top: -30px;
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+}
+
+.right_partition{
+	display: inline-block;
+	position: relative;
+	margin-left: 10px;
+	position: relative;
+	top: 10px;
+}
+
+.distribution_graphic input {
+	width:30px;
+	position: relative;
+	top: -12px;
+}
+
+.right_partition input {
+	top: -25px;
+}
+
+/* designers.html */
+
+.contest_box {
+	margin-top: 50px;
+	font-size: 28px;
+}
+
+.list_body {
+	line-height: 30px;
+}
+
+/* detail.html */
+
+.contest_info {
+	font-size: 20px;
+	line-height: 40px;
+}
+
+/* success.html */
+
+.success_banner {
+	font-size: 60px;
+	position: relative;
+	top: 100px;
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container'>
+	<div class='header'>
+		Enter a Contest!
+	</div>
+	<div class='span10 offset 1'>
+		<div class='midsection'>
+			<form action='/entrysuccess/{{contest.id}}/' method='POST' enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class='infobox'>
+					Full Name: 
+					<input type="text" name="name_box" placeholder="Name">
+				</div>
+				<div class='infobox'>
+					School:
+					<input type="text" name="school_box" placeholder="School">
+				</div>
+				<div class='infobox'>
+					Year:
+					<select name='school_year'>
+		  				<option value='1'>1</option>
+		  				<option value='2'>2</option>
+		  				<option value='3'>3</option>
+		  				<option value='4'>4</option>
+		  				<option value='5'>5</option>
+					</select>
+				</div>
+				<div class='infobox'>
+					Email:
+					<input type="email" name="email_box" placeholder="Email">
+				</div>
+				<div class='infobox'>
+					Upload:
+					<input type="file" name="file_upload" placeholder="Upload File">
+				</div>
+				<input class="btn btn-inverse" type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock content %}

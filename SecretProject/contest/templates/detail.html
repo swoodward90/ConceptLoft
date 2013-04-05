@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class='container'>
+		<div class='header'>
+			{{contest.title}}
+		</div>
+		<div class='list_body'>
+			<div class='span12'> 
+				<div class='contest_info'>
+					{{contest.company.company_name}} </br>
+					Number of winners: {{contest.number_winning}} </br>
+					Total prize money: {{contest.prize_money}} </br>
+					Contest length: {{contest.contest_length}} days starting on {{contest.start_date}} </br>
+					{{contest.description}} </br></br>
+				</div>
+			</div>
+			<a href='/entry/{{contest.id}}/'> <button class="btn btn-large btn-inverse" type="button">Enter Contest</button> </a>
+		</div>
+	</div>
+{% endblock content %}

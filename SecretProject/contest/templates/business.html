@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block htmlhead %}
+	<script>
+		$('#company_box').typeahead()
+	</script>
+{% endblock htmlhead %}
+{% block content %}
+<div class='container'>
+	<div class='header'>
+		Start a Contest!
+	</div>
+	<div class='span10 offset1'>
+		<div class='midsection'>
+			<form action='/success/' method='post'>
+				{% csrf_token %}
+				<div class='infobox'>
+					Title: </br>
+						<input type="text" name="title_box" placeholder="Title">
+				</div>
+				<div class='infobox'>
+					Company Name:</br>
+						<input type="text" data-provide="typeahead" data-source="{{company_names}}" autocomplete="off" name="company_name_box" id="company_box"placeholder="Company Name">
+				</div>
+				<div class='infobox'>
+					Number of Winning Designs:</br>
+					<select name='num_winning'>
+		  				<option value='1'>1</option>
+		  				<option value='2'>2</option>
+		  				<option value='3'>3</option>
+					</select>
+				</div>
+				<div class='infobox'>
+					Prize Money Allocated:</br></br>
+						<p><small>Total: </small></p><input type="text" name="prize_money_box" placeholder="(dollars)">
+					<div class='reminder'> The ConceptLoft will receive 25% of this value and the rest will be allocated to the designers </div>
+				</div>
+				<div class='infobox'>
+					<p><small>Distribution:</small></p>
+						<div class='distribution_container'>
+							<label class='radio'>
+								<input type="radio" name="distrRadios" id="standard" value="SD" checked>
+								Standard
+							</label>
+						</div>
+						<div class='distribution_container'>
+							<label class='radio'>
+								<input type="radio" name="distrRadios" id="equal" value="EQ">
+								Equal
+							</label>
+						</div>
+						<div class='distribution_container'>
+							<label class='radio'>
+								<input type="radio" name="distrRadios" id="custom" value="CM">
+								Custom
+							</label>
+						</div></br>
+						<div class='distribution_graphic' style="top:-35px;">
+							<div class='left_partition'>
+								40% </br>
+								25% </br>
+								10%
+							</div>
+							<div class='mid_partition'>
+								or
+							</div>
+							<div class='right_partition'>
+								50% </br>
+								25%
+							</div>
+
+						</div>
+						<div class='distribution_graphic' style="top:-35px;">
+							<div class='left_partition'>
+								25% </br>
+								25% </br>
+								25%
+							</div>
+							<div class='mid_partition'>
+								or
+							</div>
+							<div class='right_partition'>
+								37.5% </br>
+								37.5%
+							</div>
+
+						</div>
+						<div class='distribution_graphic'>
+							<div class='left_partition'>
+								<input type="text" name="prize_percent_13"></br>
+								<input type="text" name="prize_percent_23"></br>
+								<input type="text" name="prize_percent_33">
+							</div>
+							<div class='mid_partition'>
+								<div style='position:relative;top:-35px;'> or </div>
+							</div>
+							<div class='right_partition'>
+								<input type="text" name="prize_percent_12"></br>
+								<input type="text" name="prize_percent_22">
+							</div>
+						</div>
+				</div>
+				<div class='infobox'>
+					 Length of Contest:</br>
+						 <input type="text" name="total_days_box"> <small>days starting on </small><input type="date" name="start_date_box">
+				</div>
+				<div class='infobox'>
+					 Contest Description/Specifications:</br>
+						 <textarea rows="5" style="width:500px;" name="description_box"></textarea>
+				</div>
+				<input class="btn btn-inverse" type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock content %}
