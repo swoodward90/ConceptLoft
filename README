@@ -1,1 +1,7 @@
 All the files for the django project
+Next steps:
+-Serving on Heroko or Apache/mod-wsgi
+-user verification
+-SOUTH!!!
+-security
+-middleware
